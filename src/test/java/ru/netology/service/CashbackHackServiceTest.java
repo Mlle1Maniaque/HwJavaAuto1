@@ -5,8 +5,18 @@ import org.junit.jupiter.api.Assertions;
 
 public class CashbackHackServiceTest {
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void shouldReturnCashbackIfAmount1000() {
+        CashbackHackService service = new CashbackHackService();
+
+        int expected = 0;
+        int actual = service.remain(1000);
+
+        Assertions.assertEquals(actual, expected);
+    }
+
+    @Test
+    public void shouldReturnCashbackIfAmount1000ver2() {
         CashbackHackService service = new CashbackHackService();
 
         int expected = 0;
